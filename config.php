@@ -9,7 +9,7 @@ return [
      *
      * @see Maffinca69\ImageProxy\Providers
      */
-    'provider' => env('MAFFINCA69_IMAGE_PROXY_PROVIDER', 'weserv'),
+    'provider' => env('LARAVEL_IMAGE_PROXY_PROVIDER', 'weserv'),
 
     /**
      * Specified settings for providers

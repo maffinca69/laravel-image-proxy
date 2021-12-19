@@ -15,15 +15,15 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config.php' => config_path('maffinca69-image-proxy.php')
+            __DIR__ . '/../config.php' => config_path('laravel-image-proxy.php')
         ], 'config');
     }
 
     public function register()
     {
         $this->app->singleton(ImageProxy::class, function ($app) {
-            $providerClass = config('maffinca69-image-proxy.provider');
-            $options = config('maffinca69-image-proxy.providers.'.$providerClass, []);
+            $providerClass = config('laravel-image-proxy.provider');
+            $options = config('laravel-image-proxy.providers.'.$providerClass, []);
 
             if (array_key_exists($providerClass, $this->providerAliases)) {
                 $providerClass = $this->providerAliases[$providerClass];
