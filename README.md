@@ -1,7 +1,7 @@
 # Package laravel-image-proxy
 
 This is a class for generate image-proxy url. Implementations of providers:
-* image.weserv.nl
+* images.weserv.nl
 
 ## Install
 Require package:
