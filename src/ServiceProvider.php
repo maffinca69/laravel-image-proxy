@@ -21,7 +21,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(ImageProxy::class, function ($app) {
+        $this->app->singleton(Proxy::class, function ($app) {
             $providerClass = config('laravel-image-proxy.provider');
             $options = config('laravel-image-proxy.providers.'.$providerClass, []);
 
@@ -29,7 +29,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
                 $providerClass = $this->providerAliases[$providerClass];
             }
 
-            return new ImageProxy(
+            return new Proxy(
                 $app->make($providerClass, [
                     'options' => Arr::except($options, 'default_options')
                 ]),

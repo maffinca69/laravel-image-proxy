@@ -4,7 +4,7 @@ namespace Maffinca69\ImageProxy;
 
 use Maffinca69\ImageProxy\Contracts\Provider;
 
-class ImageProxy
+class Proxy
 {
     /**
      * @var Provider
@@ -17,7 +17,7 @@ class ImageProxy
     private array $defaultOptions;
 
     /**
-     * ImageProxy constructor
+     * Proxy constructor
      *
      * @param Provider $bridge
      * @param array $defaultOptions
