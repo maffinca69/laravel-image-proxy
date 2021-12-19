@@ -17,8 +17,10 @@ class WeServ implements Provider
     public function build(string $url, array $options = []): string
     {
         $options['url'] = $this->prepareUrl($url);
+        $params = $options;
+        unset($params['host']);
 
-        return http_build_url($options['host'], $options);
+        return $options['host'] . '?' . http_build_query($params);
     }
 
     /**
