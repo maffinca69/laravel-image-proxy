@@ -1,5 +1,5 @@
 {
-    "name": "maffinca69/image-proxy",
+    "name": "maffinca69/laravel-image-proxy",
     "description": "Generate url for nginx-image-proxy",
     "autoload": {
         "psr-4": {
@@ -7,6 +7,7 @@
         }
     },
     "require": {
+        "php": ">=7.4",
         "illuminate/support": ">=5.0"
     },
     "require-dev": {
