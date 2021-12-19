@@ -1,0 +1,30 @@
+{
+    "name": "maffinca69/image-proxy",
+    "description": "Generate url for nginx-image-proxy",
+    "autoload": {
+        "psr-4": {
+            "Maffinca69\\ImageProxy\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": ">=5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "illuminate/log": ">=5.0",
+        "infection/infection": "^0.10"
+    },
+    "authors": [
+        {
+            "name": "Maffinca69",
+            "email": "maffinca69@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Maffinca69\\ImageProxy\\ServiceProvider"
+            ]
+        }
+    }
+}
