@@ -24,7 +24,7 @@ php artisan vendor:publish --provider="Maffinca69\ImageProxy\ServiceProvider" --
 ```php
 class IndexController extends Controller
 {
-    public function getProxyUrl(Maffinca79\ImageProxy\Proxy $proxyProvider)
+    public function getProxyUrl(Maffinca69\ImageProxy\Proxy $proxyProvider)
     {
         return $proxyProvider->getUrl('your_url_img', [
             'fit' => 'cover',
